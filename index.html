@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Watch - Premium Timepieces</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" aria-label="Luxe Watch Logo">LUXE WATCH</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <button class="theme-toggle" aria-label="Toggle Theme">
+                <span class="icon-sun">☀️</span>
+                <span class="icon-moon" style="display: none;">🌙</span>
+            </button>
+            <div class="cart-icon" onclick="toggleCart()" role="button" aria-label="Cart">
+                🛒
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel Section -->
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">
+                <div class="slide-content">
+                    <h2>Luxury Collection</h2>
+                    <p><a href="#" class="view-watches" data-target="#luxuryWatches">Discover our premium timepieces</a></p>
+                </div>
+            </div>
+            <div class="swiper-slide slide2">
+                <div class="slide-content">
+                    <h2>New Arrivals</h2>
+                    <p><a href="#" class="view-watches" data-target="#newArrivalsWatches">Explore our latest designs</a></p>
+                </div>
+            </div>
+            <div class="swiper-slide slide3">
+                <div class="slide-content">
+                    <h2>Limited Edition</h2>
+                    <p><a href="#" class="view-watches" data-target="#limitedEditionWatches">Exclusive timepieces for collectors</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Search Section -->
+    <div class="search-section">
+        <input type="text" class="search-input" placeholder="Search watches...">
+        <button class="search-button">Search</button>
+    </div>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <!-- Product cards will be dynamically inserted here -->
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <h2>About Luxe Watch</h2>
+            <p>Founded in 2024, Luxe Watch has been at the forefront of luxury timepiece retail...</p>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="overlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <span class="close-cart" onclick="toggleCart()">×</span>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+            <h3>Total: $0.00</h3>
+        </div>
+        <div class="payment-section">
+            <form class="payment-form" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label>Card Number</label>
+                    <input type="text" class="payment-input" placeholder="1234 5678 9012 3456">
+                </div>
+                <div class="form-group">
+                    <label>Expiry Date</label>
+                    <input type="text" class="payment-input" placeholder="MM/YY">
+                </div>
+                <div class="form-group">
+                    <label>CVV</label>
+                    <input type="text" class="payment-input" placeholder="123">
+                </div>
+                <button type="button" class="checkout-button">Checkout</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Luxury Watches Modal/Section -->
+    <div id="luxuryWatches" class="watches-modal" style="display: none;">
+        <div class="watches-content">
+            <h3>Luxury Collection Watches</h3>
+            <div class="watch-card">
+                <img src="images/luxury1.jpg" alt="Luxury Watch 1">
+                <p>Luxury Watch 1</p>
+                <p>$500.00</p>
+                <p>Elegant and timeless design with a classic touch.</p>
+            </div>
+            <div class="watch-card">
+                <img src="images/luxury2.jpg" alt="Luxury Watch 2">
+                <p>Luxury Watch 2</p>
+                <p>$750.00</p>
+                <p>Crafted with precision and luxury materials.</p>
+            </div>
+            <div class="watch-card">
+                <img src="images/luxury3.jpg" alt="Luxury Watch 3">
+                <p>Luxury Watch 3</p>
+                <p>$900.00</p>
+                <p>Exclusive design for the discerning collector.</p>
+            </div>
+            <button class="close-modal">Close</button>
+        </div>
+    </div>
+
+    <!-- New Arrivals Watches Modal/Section -->
+    <div id="newArrivalsWatches" class="watches-modal" style="display: none;">
+        <div class="watches-content">
+            <h3>New Arrivals Watches</h3>
+            <div class="watch-card">
+                <img src="images/new1.jpg" alt="New Arrival Watch 1">
+                <p>New Arrival Watch 1</p>
+                <p>$300.00</p>
+                <p>Fresh design with modern aesthetics.</p>
+            </div>
+            <div class="watch-card">
+                <img src="images/new2.jpg" alt="New Arrival Watch 2">
+                <p>New Arrival Watch 2</p>
+                <p>$350.00</p>
+                <p>Innovative features with a sleek look.</p>
+            </div>
+            <div class="watch-card">
+                <img src="images/new3.jpg" alt="New Arrival Watch 3">
+                <p>New Arrival Watch 3</p>
+                <p>$400.00</p>
+                <p>Contemporary style for the modern individual.</p>
+            </div>
+            <button class="close-modal">Close</button>
+        </div>
+    </div>
+
+    <!-- Limited Edition Watches Modal/Section -->
+    <div id="limitedEditionWatches" class="watches-modal" style="display: none;">
+        <div class="watches-content">
+            <h3>Limited Edition Watches</h3>
+            <div class="watch-card">
+                <img src="images/limited1.jpg" alt="Limited Edition Watch 1">
+                <p>Limited Edition Watch 1</p>
+                <p>$1,200.00</p>
+                <p>Rare and unique, crafted for exclusivity.</p>
+            </div>
+            <div class="watch-card">
+                <img src="images/limited2.jpg" alt="Limited Edition Watch 2">
+                <p>Limited Edition Watch 2</p>
+                <p>$1,500.00</p>
+                <p>Designed with the finest materials and craftsmanship.</p>
+            </div>
+            <div class="watch-card">
+                <img src="images/limited3.jpg" alt="Limited Edition Watch 3">
+                <p>Limited Edition Watch 3</p>
+                <p>$2,000.00</p>
+                <p>A collector's dream, limited to a few pieces.</p>
+            </div>
+            <button class="close-modal">Close</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+    function validateForm() {
+        // Basic validation example
+        const cardNumber = document.querySelector('.payment-input[name="card-number"]').value;
+        if (!/^\d{16}$/.test(cardNumber)) {
+            alert('Please enter a valid card number.');
+            return false;
+        }
+        // Add more validation as needed
+        return true;
+    }
+    </script>
+    <input type="checkbox" id="darkModeToggle" aria-label="Toggle Dark Mode">
+</body>
+</html>
