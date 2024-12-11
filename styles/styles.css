@@ -102,6 +102,7 @@ body {
 
 .Slider {
   margin-top: 150px;
+  clip-path: polygon(93% 0, 100% 50%, 93% 99%, 0% 100%, 8% 51%, 0% 0%);
   padding: 10px;
   background: url("../images/background.jpg") center;
   position: relative;
@@ -186,10 +187,10 @@ body {
 .features {
   display: flex;
   align-items: center;
-  justify-content: space-evenly; /* Distributes items evenly with equal spacing */
-  flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   padding: 50px;
-  gap: 20px; /* Optional: Adds consistent spacing between logos */
+  gap: 20px;
 }
 
 .feature {
@@ -197,14 +198,14 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  flex: 1; /* Makes each feature take equal space */
-  max-width: 150px; /* Optional: Limit the maximum width of each feature */
+  flex: 1;
+  max-width: 150px;
 }
 
 .featureIcon {
-  width: 100%; /* Scale icons to fit their container */
-  max-width: 80px; /* Restrict maximum icon size */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  max-width: 80px;
+  height: auto;
 }
 
 .featureTitle {
@@ -217,4 +218,107 @@ body {
   color: #555;
   width: 50%;
   height: 100px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: white;
+  padding: 20px 50px;
+  gap: 20px;
+}
+
+.productImg {
+  width: 40%;
+  max-width: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.product:hover .productImg {
+  filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.2));
+  transform: scale(1.05);
+}
+
+.productContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 50%;
+  gap: 20px;
+}
+
+.productDetails h1 {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.productDetails h2 {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.productDetails p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #0c0b4d;
+}
+
+.variations {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.variation {
+  width: 120px;
+  height: 120px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.variation img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.variation:hover img {
+  transform: scale(1.5);
+}
+
+.addButton {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: flex-end;
+}
+
+.addButton:hover {
+  background-color: #333;
+  transform: scale(1.05);
 }
