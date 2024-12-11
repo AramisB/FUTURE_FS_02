@@ -42,38 +42,38 @@
     <div class="Slider">
         <div class="sliderWrapper">
             <div class="sliderItem">
-                <img src="./images/watch1.jpg" alt="Watch 1">
+                <img src="./images/watch1.jpg" alt="Luxury Watch">
                 <div class="sliderBg"></div>
-                <h1 class="sliderTitle">Watch 1</h1>
+                <h1 class="sliderTitle">Luxury Watch</h1>
                 <h2 class="sliderPrice">$490</h2>
                 <a href="#product"><button class="buyButton">Buy Now</button></a>
             </div>
             <div class="sliderItem">
-                <img src="./images/dive.webp" alt="Watch 2">
+                <img src="./images/dive.webp" alt="Dive Watch">
                 <div class="sliderBg"></div>
-                <h1 class="sliderTitle">Watch 2</h1>
+                <h1 class="sliderTitle">Dive Watch</h1>
                 <h2 class="sliderPrice">$250</h2>
                 <a href="#product"><button class="buyButton">Buy Now</button></a>
             </div>
             <div class="sliderItem">
-                <img src="./images/sport.jpg" alt="Watch 3">
+                <img src="./images/sport.jpg" alt="Sport Watch">
                 <div class="sliderBg"></div>
-                <h1 class="sliderTitle">Watch 3</h1>
+                <h1 class="sliderTitle">Sport Watch</h1>
                 <h2 class="sliderPrice">$310</h2>
                 <a href="#product"><button class="buyButton">Buy Now</button></a>
             </div>
             <div class="sliderItem">
-                <img src="./images/new2.webp" alt="Watch 4">
+                <img src="./images/new2.webp" alt="Dress Watch">
                 <div class="sliderBg"></div>
-                <h1 class="sliderTitle">Watch 3</h1>
+                <h1 class="sliderTitle">Dress Watch</h1>
                 <h2 class="sliderPrice">$400</h2>
                 <a href="#product"><button class="buyButton">Buy Now</button></a>
             </div>
             <div class="sliderItem">
-                <img src="./images/pilot.jpg" alt="Watch 5">
+                <img src="./images/pilot.jpg" alt="Pilot Watch">
                 <div class="sliderBg"></div>
-                <h1 class="sliderTitle">Watch 3</h1>
-                <h2 class="sliderPrice">$450    </h2>
+                <h1 class="sliderTitle">Pilot Watch</h1>
+                <h2 class="sliderPrice">$450</h2>
                 <a href="#product"><button class="buyButton">Buy Now</button></a>
             </div>
         </div>
@@ -107,28 +107,51 @@
                 <p>24/7 Customer Support</p>
             </div>
         </div>
-        <div class="product">
-            <img src="./images/watch1.jpg" alt="Watch 1" class="productImg">
-            <div class="productContent">
-                <div class="productDetails">
-                    <h1 class="productTitle">BINBOND Gold Watch</h1>
-                    <h2 class="productPrice">$490</h2>
-                    <p class="productDesc">Luxury Original Watches Mens Waterproof Stainless Steel Golden</p>
-                </div>
-                <div class="variations">
-                    <div class="variation">
-                        <img src="./images/Binbond1.jpg" alt="variation 1">
-                    </div>
-                    <div class="variation">
-                        <img src="./images/Binbond2.jpg" alt="variation 2">
-                    </div>
-                    <div class="variation">
-                        <img src="./images/Binbond3.jpg" alt="variation 3">
-                    </div>
-                </div>
-                <button class="addButton">Add to Cart</button>
+    </div>
+    <div class="product" id="product">
+        <img src="./images/watch1.jpg" alt="Luxury Watch" class="productImg">
+        <div class="productContent">
+            <div class="productDetails">
+                <h1 class="productTitle">Luxury Watch</h1>
+                <h2 class="productPrice">$490</h2>
+                <p class="productDesc">Luxury Original Watches Mens Waterproof Stainless Steel Golden</p>
             </div>
-        </div>          
+            <div class="variations">
+                <div class="variation">
+                    <img src="./images/Binbond1.jpg" alt="Luxury Variation 1">
+                </div>
+                <div class="variation">
+                    <img src="./images/Binbond2.jpg" alt="Luxury Variation 2">
+                </div>
+                <div class="variation">
+                    <img src="./images/Binbond3.jpg" alt="Luxury Variation 3">
+                </div>
+            </div>
+            <button class="addButton">Add to Cart</button>
+        </div>
+        <div class="payment">
+            <h1 class="payTitle">Personal Information</h1>
+            <label>Name and Surname</label>
+            <input type="text" placeholder="John Doe" class="payInput">
+            <label>Phone Number</label>
+            <input type="text" placeholder="+1 234 5678" class="payInput">
+            <label>Address</label>
+            <input type="text" placeholder="Elton St 21 22-145" class="payInput">
+            <h1 class="payTitle">Card Information</h1>
+            <div class="cardIcons">
+                <img src="./images/visa.png" width="40" alt="" class="cardIcon">
+                <img src="./images/master.jpg" alt="" width="40" class="cardIcon">
+            </div>
+            <input type="password" class="payInput" placeholder="Card Number">
+            <div class="cardInfo">
+                <input type="text" placeholder="mm" class="payInput sm">
+                <input type="text" placeholder="yyyy" class="payInput sm">
+                <input type="text" placeholder="cvv" class="payInput sm">
+            </div>
+            <button class="payButton">Checkout!</button>
+            <span class="close">X</span>
+        </div>
+    </div>  
     <script src="main.js"></script>
 </body>
 </html>

@@ -15,7 +15,7 @@ const productVariations = document.querySelectorAll(".variation img");
 const products = [
   {
     id: 1,
-    title: "BINBOND Gold Watch",
+    title: "Luxury Watch",
     price: 490,
     desc: "Luxury Original Watches Mens Waterproof Stainless Steel Golden",
     img: "./images/watch1.jpg",
@@ -27,20 +27,20 @@ const products = [
     price: 250,
     desc: "Perfect for underwater adventures.",
     img: "./images/dive.webp",
-    variations: ["./images/dive1.jpg", "./images/dive2.jpg", "./images/dive3.jpg"],
+    variations: ["./images/diver1.jpg", "./images/diver2.webp", "./images/diver3.jpg"],
   },
   {
     id: 3,
     title: "Sport Watch",
-    price: 310,
+    price: 330,
     desc: "Built for high-performance activities.",
     img: "./images/sport.jpg",
-    variations: ["./images/sport1.jpg", "./images/sport2.jpg", "./images/sport3.jpg"],
+    variations: ["./images/sport1.jpg", "./images/sport2.jpg", "./images/sport3.webp"],
   },
   {
     id: 4,
     title: "Dress Watch",
-    price: 400,
+    price: 250,
     desc: "Elegant timepieces for formal occasions.",
     img: "./images/new2.webp",
     variations: ["./images/dress1.jpg", "./images/dress2.jpg", "./images/dress3.jpg"],
@@ -96,3 +96,4 @@ const addButton = document.querySelector(".addButton");
 addButton.addEventListener("click", () => {
   alert(`Added ${selectedProduct.title} to the cart!`);
 });
+
