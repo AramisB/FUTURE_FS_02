@@ -3,155 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxe Watch - Premium Timepieces</title>
+    <title>Tempus - Your Time. Your Story</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css" />
 </head>
 <body>
-    <nav id="navbar">
-        <!-- Top Section -->
-        <div class="navTop">
-            <!-- Logo -->
-            <div class="navItem" aria-label="Luxe Watch Logo">
-                <a href="#home">
-                    <img src="./images/LuxeLogo.png" alt="Luxe Watch Logo">
-                </a>
-            </div>
-            <!-- Search Bar -->
-            <div class="navItem">
-                <div class="search">
-                    <input type="text" placeholder="Search..." class="searchInput">
-                    <img src="./images/search.png" alt="Search Icon" width="20" height="20" class="searchIcon">
+    <div class="container">
+        <nav id="navbar">
+            <!-- Top Section -->
+            <div class="navTop">
+                <!-- Logo -->
+                <div class="navItem" aria-label="Tempus Logo">
+                    <a href="#home">
+                        <img src="./images/logo.png" alt="Tempus Logo">
+                    </a>
+                </div>
+                <!-- About, Contacts, and Cart -->
+                <div class="navLinks">
+                    <a href="#about" class="navLink">About</a>
+                    <a href="#contact" class="navLink">Contact</a>
+                    <div id="cartIcon" class="navLink cartIcon">
+                        <img src="./images/cart.png" alt="Cart Icon" width="24" height="24">
+                        <span id="cartCount">0</span>
+                    </div>
                 </div>
             </div>
-            <!-- Limited Offer -->
-            <div class="navItem">
-                <span class="limitedOffer">Limited Offer!</span>
+            <!-- Bottom Section -->
+            <div class="navBottom">
+                <h3 class="menuItem">Luxury Watches</h3>
+                <h3 class="menuItem">Dive Watches</h3>
+                <h3 class="menuItem">Sport Watches</h3>
+                <h3 class="menuItem">Dress Watches</h3>
+                <h3 class="menuItem">Pilot Watches</h3>
             </div>
-        </div>
-        <!-- Bottom Section -->
-        <div class="navBottom">
-            <h3 class="menuItem">Luxury Watches</h3>
-            <h3 class="menuItem">Dive Watches</h3>
-            <h3 class="menuItem">Sport Watches</h3>
-            <h3 class="menuItem">Dress Watches</h3>
-            <h3 class="menuItem">Pilot Watches</h3>
-        </div>
-    </nav>
-    <div class="Slider">
-        <div class="sliderWrapper">
-            <div class="sliderItem">
-                <img src="./images/watch1.jpg" alt="Luxury Watch">
-                <div class="sliderBg"></div>
-                <h1 class="sliderTitle">Luxury Watch</h1>
-                <h2 class="sliderPrice">$490</h2>
-                <a href="#product"><button class="buyButton">Buy Now</button></a>
-            </div>
-            <div class="sliderItem">
-                <img src="./images/dive.webp" alt="Dive Watch">
-                <div class="sliderBg"></div>
-                <h1 class="sliderTitle">Dive Watch</h1>
-                <h2 class="sliderPrice">$250</h2>
-                <a href="#product"><button class="buyButton">Buy Now</button></a>
-            </div>
-            <div class="sliderItem">
-                <img src="./images/sport.jpg" alt="Sport Watch">
-                <div class="sliderBg"></div>
-                <h1 class="sliderTitle">Sport Watch</h1>
-                <h2 class="sliderPrice">$310</h2>
-                <a href="#product"><button class="buyButton">Buy Now</button></a>
-            </div>
-            <div class="sliderItem">
-                <img src="./images/new2.webp" alt="Dress Watch">
-                <div class="sliderBg"></div>
-                <h1 class="sliderTitle">Dress Watch</h1>
-                <h2 class="sliderPrice">$400</h2>
-                <a href="#product"><button class="buyButton">Buy Now</button></a>
-            </div>
-            <div class="sliderItem">
-                <img src="./images/pilot.jpg" alt="Pilot Watch">
-                <div class="sliderBg"></div>
-                <h1 class="sliderTitle">Pilot Watch</h1>
-                <h2 class="sliderPrice">$450</h2>
-                <a href="#product"><button class="buyButton">Buy Now</button></a>
-            </div>
-        </div>
-    </div>
-    <div class="features">
-        <div class="feature">
-            <img src="./images/shipping.png" alt="Shipping Icon" width="50" height="50">
-            <div class="featureText">
-                <h2>Free Shipping</h2>
-                <p>Free shipping on all orders</p>
-            </div>
-        </div>
-        <div class="feature">
-            <img src="./images/return.png" alt="Return Icon" width="50" height="50">
-            <div class="featureText">
-                <h2>30 Days Return</h2>
-                <p>Return it within 30 days for free</p>
-            </div>
-        </div>
-        <div class="feature">
-            <img src="./images/gift.jpg" alt="Gift Icon" width="50" height="50">
-            <div class="featureText">
-                <h2>Gift Cards</h2>
-                <p>Buy gift cards and use coupon codes</p>
-            </div>
-        </div>
-        <div class="feature">
-            <img src="./images/support.png" alt="Support Icon" width="50" height="50">
-            <div class="featureText">
-                <h2>Support</h2>
-                <p>24/7 Customer Support</p>
-            </div>
-        </div>
-    </div>
-    <div class="product" id="product">
-        <img src="./images/watch1.jpg" alt="Luxury Watch" class="productImg">
-        <div class="productContent">
-            <div class="productDetails">
-                <h1 class="productTitle">Luxury Watch</h1>
-                <h2 class="productPrice">$490</h2>
-                <p class="productDesc">Luxury Original Watches Mens Waterproof Stainless Steel Golden</p>
-            </div>
-            <div class="variations">
-                <div class="variation">
-                    <img src="./images/Binbond1.jpg" alt="Luxury Variation 1">
+        </nav>    
+        <div class="Slider">
+            <div class="sliderWrapper">
+                <div class="sliderItem">
+                    <img src="./images/watch1.jpg" alt="Luxury Watch">
+                    <div class="sliderBg"></div>
+                    <h1 class="sliderTitle">Luxury Watch</h1>
+                    <h2 class="sliderPrice">$490</h2>
+                    <a href="#product"><button class="buyButton">Buy Now</button></a>
                 </div>
-                <div class="variation">
-                    <img src="./images/Binbond2.jpg" alt="Luxury Variation 2">
+                <div class="sliderItem">
+                    <img src="./images/dive.webp" alt="Dive Watch">
+                    <div class="sliderBg"></div>
+                    <h1 class="sliderTitle">Dive Watch</h1>
+                    <h2 class="sliderPrice">$250</h2>
+                    <a href="#product"><button class="buyButton">Buy Now</button></a>
                 </div>
-                <div class="variation">
-                    <img src="./images/Binbond3.jpg" alt="Luxury Variation 3">
+                <div class="sliderItem">
+                    <img src="./images/sport.jpg" alt="Sport Watch">
+                    <div class="sliderBg"></div>
+                    <h1 class="sliderTitle">Sport Watch</h1>
+                    <h2 class="sliderPrice">$310</h2>
+                    <a href="#product"><button class="buyButton">Buy Now</button></a>
+                </div>
+                <div class="sliderItem">
+                    <img src="./images/new2.webp" alt="Dress Watch">
+                    <div class="sliderBg"></div>
+                    <h1 class="sliderTitle">Dress Watch</h1>
+                    <h2 class="sliderPrice">$400</h2>
+                    <a href="#product"><button class="buyButton">Buy Now</button></a>
+                </div>
+                <div class="sliderItem">
+                    <img src="./images/pilot.jpg" alt="Pilot Watch">
+                    <div class="sliderBg"></div>
+                    <h1 class="sliderTitle">Pilot Watch</h1>
+                    <h2 class="sliderPrice">$450</h2>
+                    <a href="#product"><button class="buyButton">Buy Now</button></a>
                 </div>
             </div>
-            <button class="addButton">Add to Cart</button>
         </div>
-        <div class="payment">
-            <h1 class="payTitle">Personal Information</h1>
-            <label>Name and Surname</label>
-            <input type="text" placeholder="John Doe" class="payInput">
-            <label>Phone Number</label>
-            <input type="text" placeholder="+1 234 5678" class="payInput">
-            <label>Address</label>
-            <input type="text" placeholder="Elton St 21 22-145" class="payInput">
-            <h1 class="payTitle">Card Information</h1>
-            <div class="cardIcons">
-                <img src="./images/visa.png" width="40" alt="" class="cardIcon">
-                <img src="./images/master.jpg" alt="" width="40" class="cardIcon">
-            </div>
-            <input type="password" class="payInput" placeholder="Card Number">
-            <div class="cardInfo">
-                <input type="text" placeholder="mm" class="payInput sm">
-                <input type="text" placeholder="yyyy" class="payInput sm">
-                <input type="text" placeholder="cvv" class="payInput sm">
-            </div>
-            <button class="payButton">Checkout!</button>
-            <span class="close">X</span>
+        <!-- About Section -->
+        <div id="about" class="aboutSection">
+            <div class="aboutWrapper">
+            <a href="#home"></a>
+            <h2>Tempus: Where Time Finds Its Meaning</h2>
+            <p>
+                At Tempus, we believe time is more than just a sequence of hours and minutes. It's a precious resource, a canvas for experiences, and a reflection of our unique journeys.
+            </p>
+            <p>
+                We curate a collection of exceptional timepieces – from classic and timeless designs to cutting-edge innovations – that not only tell time but also tell stories.
+            </p>
+            <p>
+                Whether you're seeking a statement piece, a reliable everyday companion, or an heirloom to pass down through generations, Tempus is your destination.
+            </p>
+            <p>
+                Explore our curated selection and discover the timepiece that resonates with your own personal narrative.
+            </p>
         </div>
-    </div>  
+        <div class="features">
+            <div class="feature">
+                <img src="./images/shipping.png" alt="Shipping Icon" width="50" height="50">
+                <div class="featureText">
+                    <h2>Free Shipping</h2>
+                    <p>Free shipping on all orders</p>
+                </div>
+            </div>
+            <div class="feature">
+                <img src="./images/return.png" alt="Return Icon" width="50" height="50">
+                <div class="featureText">
+                    <h2>30 Days Return</h2>
+                    <p>Return it within 30 days for free</p>
+                </div>
+            </div>
+            <div class="feature">
+                <img src="./images/gift.jpg" alt="Gift Icon" width="50" height="50">
+                <div class="featureText">
+                    <h2>Gift Cards</h2>
+                    <p>Buy gift cards and use coupon codes</p>
+                </div>
+            </div>
+            <div class="feature">
+                <img src="./images/support.png" alt="Support Icon" width="50" height="50">
+                <div class="featureText">
+                    <h2>Support</h2>
+                    <p>24/7 Customer Support</p>
+                </div>
+            </div>
+        </div>
+        <div class="product" id="product">
+            <img src="./images/watch1.jpg" alt="Luxury Watch" class="productImg">
+            <div class="productContent">
+                <div class="productDetails">
+                    <h1 class="productTitle">Luxury Watch</h1>
+                    <h2 class="productPrice">$490</h2>
+                    <p class="productDesc">Luxury Original Watches Mens Waterproof Stainless Steel Golden</p>
+                </div>
+                <div class="variations">
+                    <div class="variation">
+                        <img src="./images/Binbond1.jpg" alt="Luxury Variation 1">
+                    </div>
+                    <div class="variation">
+                        <img src="./images/Binbond2.jpg" alt="Luxury Variation 2">
+                    </div>
+                    <div class="variation">
+                        <img src="./images/Binbond3.jpg" alt="Luxury Variation 3">
+                    </div>
+                    <button class="addButton">Add to Cart</button>
+                </div>
+            </div>
+            <div class="payment-overlay" id="payment-overlay"></div>
+            <div class="payment" id="payment-modal" style="display: none;">
+                <form id="payment-form">
+                    <h2>Payment Summary</h2>
+                    <p>Subtotal: <span id="subtotal">$0.00</span></p>
+                    <p>Tax (8%): <span id="tax">$0.00</span></p>
+                    <p>Total: <span id="total">$0.00</span></p>
+                </form>
+                <h1 class="payTitle">Personal Information</h1>
+                <label>Name and Surname</label>
+                <input type="text" placeholder="John Doe" class="payInput">
+                <label>Phone Number</label>
+                <input type="text" placeholder="+1 234 5678" class="payInput">
+                <label>Address</label>
+                <input type="text" placeholder="Elton St 21 22-145" class="payInput">
+                <h1 class="payTitle">Card Information</h1>
+                <div class="cardIcons">
+                    <img src="./images/visa.png" width="40" alt="" class="cardIcon">
+                    <img src="./images/master.jpg" alt="" width="40" class="cardIcon">
+                </div>
+                <input type="password" class="payInput" placeholder="Card Number">
+                <div class="cardInfo">
+                    <input type="text" placeholder="mm" class="payInput sm">
+                    <input type="text" placeholder="yyyy" class="payInput sm">
+                    <input type="text" placeholder="cvv" class="payInput sm">
+                </div>
+                <button class="payButton">Checkout!</button>
+                <span id="close-payment" class="close">X</span>
+            </div>
+        </div>
+        <!-- Footer Section -->
+        <footer id="footer" class="footer">
+            <div class="footerContainer">
+                <!-- Contact Section -->
+                <div class="footerSection" id="contact">
+                    <h2>Contact Us</h2>
+                    <ul class="contactList">
+                        <li>Email: <a href="mailto:support@tempus.tech">support@tempus.tech</a></li>
+                        <li>Phone: <a href="tel:+123456789">+1 234 567 89</a></li>
+                        <li>Address: 123 Luxury Lane, Watch City, WC 45678</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Footer Links -->
+            <div class="footerLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#product">Products</a>
+            </div>
+            <!-- Copyright -->
+            <div class="footerBottom">
+                <p>&copy; 2024 Tempus. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div> 
     <script src="main.js"></script>
 </body>
 </html>

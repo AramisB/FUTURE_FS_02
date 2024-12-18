@@ -91,9 +91,75 @@ productVariations.forEach((variation) => {
   });
 });
 
-// Add to Cart Button
+
+// Payment Modal Elements
 const addButton = document.querySelector(".addButton");
+const paymentModal = document.getElementById("payment-modal");
+const paymentOverlay = document.getElementById("payment-overlay");
+const closeButton = document.getElementById("close-payment");
+const subtotalEl = document.getElementById("subtotal");
+const taxEl = document.getElementById("tax");
+const totalEl = document.getElementById("total");
+
+// Add to cart
 addButton.addEventListener("click", () => {
-  alert(`Added ${selectedProduct.title} to the cart!`);
+  cart.addItem(selectedProduct);
+  updateCart();
 });
 
+const cart = {
+  items: [],
+  addItem: function(item) {
+    const existingItem = this.items.find(i => i.id === item.id);
+    if (existingItem) {
+      existingItem.quantity++;
+    } else {
+      this.items.push({ ...item, quantity: 1 });
+    }
+    this.updateTotal();
+  },
+  removeItem: function(itemId) {
+    const index = this.items.findIndex(i => i.id === itemId);
+    if (index !== -1) {
+      this.items.splice(index, 1);
+      this.updateTotal();
+    }
+  },
+  updateQuantity: function(itemId, quantity) {
+    const item = this.items.find(i => i.id === itemId);
+    if (item) {
+      item.quantity = quantity;
+      this.updateTotal();
+    }
+  },
+  updateTotal: function() {
+    const subtotal = this.items.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    const tax = subtotal * 0.08;
+    const total = subtotal + tax;
+
+    // Update the payment summary on the page
+    document.getElementById('subtotal').innerText = `$${subtotal.toFixed(2)}`;
+    document.getElementById('tax').innerText = `$${tax.toFixed(2)}`;
+    document.getElementById('total').innerText = `$${total.toFixed(2)}`;
+  }
+};
+
+
+// Open Payment Modal
+addButton.addEventListener("click", () => {
+    paymentModal.style.display = "block";
+    paymentOverlay.style.display = "block";
+    updatePaymentSummary();
+});
+
+// Close Payment Modal
+closeButton.addEventListener("click", () => {
+    paymentModal.style.display = "none";
+    paymentOverlay.style.display = "none";
+});
+
+// Close modal when clicking outside the payment modal
+paymentOverlay.addEventListener("click", () => {
+    paymentModal.style.display = "none";
+    paymentOverlay.style.display = "none";
+});
