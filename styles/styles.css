@@ -417,7 +417,7 @@ body {
   justify-content: space-between;
   height: 100vh;
   background: rgb(146, 140, 140);
-  padding: 20px 50px;
+  padding: 100px 50px 50px 100px;
   gap: 20px;
 }
 
@@ -427,6 +427,7 @@ body {
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease, filter 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .product:hover .productImg {
@@ -661,9 +662,9 @@ body {
   width: 100%;
   background: var(--dark);
   color: var(--light);
-  padding: 10px;
+  padding: 10px 0;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 8px;
 }
 
 .footerContainer {

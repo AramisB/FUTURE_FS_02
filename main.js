@@ -167,15 +167,12 @@ cartIcon.addEventListener("click", () => {
 
 // Function to calculate and update the payment form
 function updatePaymentSummary() {
-  // Get all the items in the cart
-  const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-  
   // Initialize subtotal
   let subtotal = 0;
 
   // Loop through the cart items and add their prices to the subtotal
-  cartItems.forEach(item => {
-      subtotal += item.price * item.quantity;
+  cart.items.forEach((item) => {
+    subtotal += item.price * item.quantity;
   });
 
   // Calculate tax (8% of subtotal)
@@ -194,8 +191,6 @@ function updatePaymentSummary() {
 const goToPaymentButton = document.getElementById('goToPayment');
 goToPaymentButton.addEventListener('click', function() {
   // Display the modal and overlay
-  const paymentOverlay = document.getElementById('payment-overlay');
-  const paymentModal = document.getElementById('payment-modal');
   paymentOverlay.style.display = 'block';
   paymentModal.style.display = 'block';
 
