@@ -68,9 +68,9 @@ body {
 }
 
 .cartOverlay {
-  display: none; /* Hidden by default */
+  display: none;
   position: fixed;
-  top: 80px; /* Adjust based on navbar height */
+  top: 80px;
   right: 20px;
   background-color: white;
   border: 1px solid #ccc;
@@ -161,6 +161,7 @@ body {
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 5px;
+  height: 50px;
 }
 
 .cartOverlay .goToPayment:hover {
@@ -513,33 +514,32 @@ body {
 }
 
 /* Payment Modal */
-.payment {
-  width: 500px;
-  background: rgb(167, 159, 159);
-  position: absolute;
-  right: 0;
-  left: 50%;
-  top: 50%;
-  width: 400px;
-  height: 600px;
-  transform: translateY(-50%, -50%);
-  padding: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  display: none;
-  z-index: 1000;
-  max-width: 100%;
-  overflow-y: auto;
-}
 .payment-overlay {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  display: none;
   z-index: 999;
+  scroll-behavior: smooth;
+}
+
+.payment {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--dark);
+  padding: 20px;
+  z-index: 1000;
+  width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
 .payment h2 {

@@ -11,6 +11,10 @@ const productPrice = document.querySelector(".productPrice");
 const productDesc = document.querySelector(".productDesc");
 const productVariations = document.querySelectorAll(".variation img");
 
+// Payment Modal and Overlay Elements
+const paymentModal = document.getElementById("payment-modal");
+const paymentOverlay = document.getElementById("payment-overlay");
+
 // Cart Elements
 const cartIcon = document.getElementById("cartIcon");
 const cartOverlay = document.getElementById("cartOverlay");
@@ -161,18 +165,57 @@ cartIcon.addEventListener("click", () => {
   cartOverlay.style.display = cartOverlay.style.display === "flex" ? "none" : "flex";
 });
 
-// Go to Payment Button
-goToPayment.addEventListener("click", () => {
-  // Trigger existing payment modal
-  paymentModal.style.display = "block";
-  paymentOverlay.style.display = "block";
+// Function to calculate and update the payment form
+function updatePaymentSummary() {
+  // Get all the items in the cart
+  const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  
+  // Initialize subtotal
+  let subtotal = 0;
+
+  // Loop through the cart items and add their prices to the subtotal
+  cartItems.forEach(item => {
+      subtotal += item.price * item.quantity;
+  });
+
+  // Calculate tax (8% of subtotal)
+  const tax = subtotal * 0.08;
+
+  // Calculate total (subtotal + tax)
+  const total = subtotal + tax;
+
+  // Update the form fields with calculated values
+  document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+  document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
+  document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+}
+
+// Show the payment modal and update payment summary when the user clicks "Go to Payment"
+const goToPaymentButton = document.getElementById('goToPayment');
+goToPaymentButton.addEventListener('click', function() {
+  // Display the modal and overlay
+  const paymentOverlay = document.getElementById('payment-overlay');
+  const paymentModal = document.getElementById('payment-modal');
+  paymentOverlay.style.display = 'block';
+  paymentModal.style.display = 'block';
+
+  // Update the payment summary
+  updatePaymentSummary();
 });
 
-// Close Payment Modal
-const closeButton = document.getElementById("close-payment");
-closeButton.addEventListener("click", () => {
-  paymentModal.style.display = "none";
-  paymentOverlay.style.display = "none";
+// Close the modal when clicking outside of it
+paymentOverlay.addEventListener('click', function(event) {
+  if (event.target === paymentOverlay) {
+      paymentOverlay.style.display = 'none';
+      document.getElementById('payment-modal').style.display = 'none';
+  }
+});
+
+// Close the modal when the close button is clicked
+const closePaymentButton = document.getElementById('close-payment');
+closePaymentButton.addEventListener('click', function() {
+  paymentOverlay.style.display = 'none';
+  document.getElementById('payment-modal').style.display = 'none';
 });
 
 // Close Cart Overlay When Clicking Outside
