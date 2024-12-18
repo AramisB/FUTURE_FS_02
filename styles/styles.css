@@ -180,6 +180,114 @@ body {
   color: var(--secondary);
 }
 
+/* Navbar for smaller screens (tablets and mobile) */
+@media (max-width: 768px) {
+  #navbar {
+    height: auto; /* Adjust height dynamically */
+    padding: 10px 15px; /* Reduce padding for smaller screens */
+    flex-direction: column;
+  }
+
+  .navTop {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Add spacing between logo and icons */
+  }
+
+  .navItem img {
+    max-width: 100px; /* Scale down logo */
+  }
+
+  .navBottom {
+    display: none; /* Hide links by default */
+    flex-direction: column;
+    gap: 10px; /* Add spacing between nav links */
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .navLinks {
+    display: none; /* Hide links by default */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cartOverlay {
+    top: 120px; /* Adjust for smaller screens */
+    right: 10px;
+    width: 90%; /* Center the cart and make it narrower */
+  }
+}
+
+/* Navbar for very small screens */
+@media (max-width: 480px) {
+  #navbar {
+    padding: 10px; /* Reduce padding further */
+  }
+
+  .navItem img {
+    max-width: 80px; /* Reduce logo size */
+  }
+
+  .cartOverlay {
+    top: 100px;
+    right: 5px;
+    width: 95%;
+  }
+
+  .cartItemImg {
+    width: 50px;
+    height: 50px; /* Scale cart item images */
+  }
+
+  .cartItemDetails {
+    font-size: 14px;
+  }
+
+  .cartItemTitle,
+  .cartItemPrice {
+    font-size: 16px; /* Adjust font sizes */
+  }
+}
+
+@media (max-width: 768px) {
+  .cartOverlay {
+    width: 85%;
+    right: 7.5%;
+    top: 100px; /* Adjust for smaller navbar */
+    max-height: 70vh; /* Prevent overflowing on small screens */
+    overflow-y: auto; /* Allow scrolling if necessary */
+  }
+
+  .cartItemImg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .goToPayment {
+    width: 100%; /* Make button full-width for smaller screens */
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cartOverlay {
+    width: 95%;
+    right: 2.5%;
+  }
+
+  .cartItemTitle,
+  .cartItemPrice {
+    font-size: 14px;
+  }
+
+  .removeItem {
+    padding: 5px;
+    font-size: 12px;
+  }
+}
+
 .Slider {
   margin-top: 200px;
   padding: 10px;
@@ -269,6 +377,74 @@ body {
 
 .sliderItem:nth-child(5) .sliderBg {
   background: #5861d2;
+}
+
+/* For tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .Slider {
+    margin-top: 150px;
+    height: 50vh;
+  }
+
+  .sliderWrapper {
+    margin-top: 50px;
+  }
+
+  .sliderTitle,
+  .sliderPrice {
+    font-size: 4vw; /* Slightly smaller font size */
+  }
+
+  .buyButton {
+    font-size: 2vw;
+    padding: 8px 16px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .Slider {
+    margin-top: 100px;
+    height: 40vh;
+  }
+
+  .sliderTitle,
+  .sliderPrice {
+    font-size: 3.5vw;
+    top: 5%; /* Adjust position for mobile screens */
+  }
+
+  .buyButton {
+    font-size: 12px;
+    padding: 6px 12px;
+    top: 30%; /* Adjust button position */
+  }
+
+  .sliderItem img {
+    width: 90%; /* Make the image take more width on small screens */
+  }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+  .Slider {
+    margin-top: 50px;
+    height: 30vh;
+  }
+
+  .sliderTitle,
+  .sliderPrice {
+    font-size: 16px;
+  }
+
+  .buyButton {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  .sliderItem img {
+    width: 95%; /* Make the image take even more width */
+  }
 }
 
 /* About Section Styling */
