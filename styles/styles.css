@@ -11,10 +11,10 @@ body {
   overflow-x: hidden;
 }
 :root {
-  --primary: #7156a8;
+  --primary: #09090a;
   --secondary: #f5c32c;
-  --dark: #181524;
-  --light: #f0f0f0;
+  --dark: #160875;
+  --light: #bccebe;
   --text-dark: #333333;
 }
 
@@ -23,7 +23,7 @@ body {
   padding: 15px 20px 10px 20px;
   position: fixed;
   width: 100%;
-  top: 0;
+  top: 0;   
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -47,7 +47,7 @@ body {
 
 /* Logo */
 .navItem img {
-  max-width: 120px;
+  max-width: 170px;
 }
 
 .navBottom {
@@ -67,6 +67,12 @@ body {
   color: var(--light);
 }
 
+.navLink {
+  color: var(--light);
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
 @media (max-width: 768px) {
   #navbar {
     flex-direction: column;
@@ -85,6 +91,7 @@ body {
     gap: 10px;
     margin-top: 10px;
     padding-right: 0;
+    background-color: var(--primary);
   }
 
   .navLinks {
@@ -93,9 +100,8 @@ body {
     gap: 10px;
   }
 
-  .menuItem {
-    font-size: 14px;
-    padding: 5px 0;
+  .navLink:hover {
+    color: var(--secondary);
   }
 }
 
@@ -153,6 +159,15 @@ body {
   color: #777;
 }
 
+@media (max-width: 768px) {
+  .cartOverlay {
+      top: auto;
+      bottom: 10px;
+      width: 90%;
+      right: 5%;
+  }
+}
+
 .removeItem {
   background: #ff0000;
   color: #fff;
@@ -203,7 +218,7 @@ body {
 .menuItem {
   margin: 0 20px;
   cursor: pointer;
-  color: var(--light);
+  color: var(--primary);
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -251,7 +266,7 @@ body {
   font-size: 60px;
   font-weight: 900;
   text-align: center;
-  color: var(--light);
+  color: var(--primary);
   z-index: 1;
 }
 .sliderPrice {
@@ -303,12 +318,23 @@ body {
   background: #5861d2;
 }
 
+@keyframes slideIn {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
 @media (max-width: 768px) {
   .sliderWrapper {
     flex-direction: column;
     width: 100vw;
     margin-top: 0;
+    animation: slideIn 1.5s ease-in-out;
   }
+  
 
   .sliderItem {
     height: auto;
@@ -559,8 +585,9 @@ body {
   transition: transform 0.3s ease;
 }
 
-.variation:hover img {
-  transform: scale(1.5);
+.variation img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Add to Cart Button */
@@ -579,6 +606,10 @@ body {
 
 .addButton:hover {
   background: #c9b707;
+}
+
+button:focus {
+  outline: 2px solid var(--secondary);
 }
 
 @media (max-width: 768px) {
