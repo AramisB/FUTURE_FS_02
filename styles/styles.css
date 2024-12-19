@@ -303,71 +303,35 @@ body {
   background: #5861d2;
 }
 
-/* For tablets and smaller laptops */
-@media (max-width: 1024px) {
-  .Slider {
-    margin-top: 150px;
-    height: 50vh;
-  }
-
-  .sliderWrapper {
-    margin-top: 50px;
-  }
-
-  .sliderTitle,
-  .sliderPrice {
-    font-size: 4vw; /* Slightly smaller font size */
-  }
-
-  .buyButton {
-    font-size: 2vw;
-    padding: 8px 16px;
-  }
-}
-
-/* For mobile devices */
 @media (max-width: 768px) {
-  .Slider {
-    margin-top: 100px;
-    height: 40vh;
+  .sliderWrapper {
+    flex-direction: column;
+    width: 100vw;
+    margin-top: 0;
   }
 
-  .sliderTitle,
-  .sliderPrice {
-    font-size: 3.5vw;
-    top: 5%; /* Adjust position for mobile screens */
-  }
-
-  .buyButton {
-    font-size: 12px;
-    padding: 6px 12px;
-    top: 30%; /* Adjust button position */
-  }
-
-  .sliderItem img {
-    width: 90%; /* Make the image take more width on small screens */
-  }
-}
-
-/* For very small devices */
-@media (max-width: 480px) {
-  .Slider {
-    margin-top: 50px;
-    height: 30vh;
+  .sliderItem {
+    height: auto;
+    padding: 10px;
   }
 
   .sliderTitle,
   .sliderPrice {
     font-size: 16px;
+    position: static;
+    text-align: center;
   }
 
   .buyButton {
-    font-size: 10px;
-    padding: 4px 8px;
+    font-size: 14px;
+    padding: 10px 20px;
+    width: 80%;
+    margin: 10px auto 0;
   }
 
   .sliderItem img {
-    width: 95%; /* Make the image take even more width */
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -457,20 +421,23 @@ body {
   }
 }
 
-/* Media Query for Responsiveness */
 @media (max-width: 768px) {
+  #about {
+    padding: 50px 20px;
+  }
+
   #about h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   #about p {
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.5;
   }
 
   #about .exploreButton {
+    font-size: 0.9rem;
     padding: 10px 20px;
-    font-size: 1rem;
   }
 }
 
@@ -614,6 +581,40 @@ body {
   background: #c9b707;
 }
 
+@media (max-width: 768px) {
+  .product {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+  }
+
+  .productImg {
+    width: 100%;
+    max-width: none;
+  }
+
+  .productContent {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .variations {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .variation {
+    width: 80px;
+    height: 80px;
+  }
+
+  .addButton {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
 /* Payment Modal */
 .payment-overlay {
   display: none;
@@ -738,20 +739,24 @@ body {
   z-index: 999;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .payment {
     width: 90%;
-    padding: 15px;
-  }
-  
-  .payInput {
-    font-size: 12px;
+    padding: 20px;
   }
 
-  .payButton, .addButton {
+  .payInput {
     font-size: 14px;
-    padding: 10px;
+  }
+
+  .payButton {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  .close {
+    font-size: 12px;
+    padding: 5px;
   }
 }
 
@@ -832,4 +837,12 @@ body {
   margin-top: 20px;
   font-size: 0.8rem;
   color: #bbb;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.8rem;
+  }
 }
