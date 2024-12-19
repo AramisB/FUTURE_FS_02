@@ -67,6 +67,38 @@ body {
   color: var(--light);
 }
 
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 15px;
+  }
+
+  .navTop {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .navBottom {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    padding-right: 0;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .menuItem {
+    font-size: 14px;
+    padding: 5px 0;
+  }
+}
+
 .cartOverlay {
   display: none;
   position: fixed;
@@ -180,114 +212,6 @@ body {
   color: var(--secondary);
 }
 
-/* Navbar for smaller screens (tablets and mobile) */
-@media (max-width: 768px) {
-  #navbar {
-    height: auto; /* Adjust height dynamically */
-    padding: 10px 15px; /* Reduce padding for smaller screens */
-    flex-direction: column;
-  }
-
-  .navTop {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px; /* Add spacing between logo and icons */
-  }
-
-  .navItem img {
-    max-width: 100px; /* Scale down logo */
-  }
-
-  .navBottom {
-    display: none; /* Hide links by default */
-    flex-direction: column;
-    gap: 10px; /* Add spacing between nav links */
-    width: 100%;
-    margin-top: 15px;
-  }
-
-  .navLinks {
-    display: none; /* Hide links by default */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center;
-    gap: 10px;
-  }
-
-  .cartOverlay {
-    top: 120px; /* Adjust for smaller screens */
-    right: 10px;
-    width: 90%; /* Center the cart and make it narrower */
-  }
-}
-
-/* Navbar for very small screens */
-@media (max-width: 480px) {
-  #navbar {
-    padding: 10px; /* Reduce padding further */
-  }
-
-  .navItem img {
-    max-width: 80px; /* Reduce logo size */
-  }
-
-  .cartOverlay {
-    top: 100px;
-    right: 5px;
-    width: 95%;
-  }
-
-  .cartItemImg {
-    width: 50px;
-    height: 50px; /* Scale cart item images */
-  }
-
-  .cartItemDetails {
-    font-size: 14px;
-  }
-
-  .cartItemTitle,
-  .cartItemPrice {
-    font-size: 16px; /* Adjust font sizes */
-  }
-}
-
-@media (max-width: 768px) {
-  .cartOverlay {
-    width: 85%;
-    right: 7.5%;
-    top: 100px; /* Adjust for smaller navbar */
-    max-height: 70vh; /* Prevent overflowing on small screens */
-    overflow-y: auto; /* Allow scrolling if necessary */
-  }
-
-  .cartItemImg {
-    width: 50px;
-    height: 50px;
-  }
-
-  .goToPayment {
-    width: 100%; /* Make button full-width for smaller screens */
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .cartOverlay {
-    width: 95%;
-    right: 2.5%;
-  }
-
-  .cartItemTitle,
-  .cartItemPrice {
-    font-size: 14px;
-  }
-
-  .removeItem {
-    padding: 5px;
-    font-size: 12px;
-  }
-}
-
 .Slider {
   margin-top: 200px;
   padding: 10px;
@@ -308,8 +232,8 @@ body {
   object-fit: contain;
   position: relative;
   z-index: 1;
-  margin-bottom: 20px;
-  border-radius: 10px;
+  border-radius: 10px;;
+
 }
 .sliderItem {
   width: 100vw;
@@ -350,7 +274,7 @@ body {
   font-weight: 900;
   padding: 10px 20px;
   border: none;
-  background: rgb(211, 247, 8);
+  background: rgb(211, 208, 9);
   z-index: 1;
   cursor: pointer;
 }
@@ -722,13 +646,13 @@ body {
 .payment h2 {
   font-size: 22px;
   margin-bottom: 20px;
-  color: #333;
+  color: #fcf7f7;
 }
 
 .payment h1.payTitle {
   font-size: 14px;
   margin-top: 20px;
-  color: #333;
+  color: #f3ecec;
 }
 
 .payInput {
